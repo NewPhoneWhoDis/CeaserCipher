@@ -26,4 +26,8 @@ public class CaesarCipher {
         if (c > letterZ) return (char) (c - ALPHABET_SIZE); // allows right rotation
         return c;
     }
+
+    public String decipher(String msg, int offset) {
+        return cipher(msg, 26 - (offset % 26));
+    }
 }

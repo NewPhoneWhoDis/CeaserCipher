@@ -15,4 +15,10 @@ class CaesarCipherTest {
     void testEmptyString() {
         assertEquals("", caesarCipher.cipher("", 12));
     }
+
+    @Test
+    void testDecipheredMessage() {
+        String decipheredMsg = caesarCipher.decipher("fqefuzs ftq pqodkbfuzs yqftap", 12);
+        assertEquals(decipheredMsg, "testing the decrypting method");
+    }
 }
